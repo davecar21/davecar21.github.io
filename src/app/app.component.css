@@ -1,0 +1,95 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --bg-dark: #121a21;
+    --bg-light: #2c3e50;
+    --bg-accent: #3f5973;
+
+    --blue-dark: #2980b9;
+    --blue-light: #3498db;
+    --blue-accent: #7dbde8;
+
+    --font-small: 0.5rem;
+    --font-medium: 1rem;
+    --font-large: 1.5rem;
+}
+
+
+.navbar{
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-dark);
+}
+
+.navbar-item{
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;    
+    height: calc(100% / 5);
+    width: 100%;
+    background: white;
+    font-size: 1.5rem;
+    transition: all ease 0.5s;
+}
+
+
+.navbar-item:hover{
+    background: green;
+    cursor: pointer;
+}
+
+.navbar-item .item-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-large);
+    transition: all ease 0.5s;
+}
+
+
+
+@media (min-width: 576px) {
+    
+ }
+
+
+ @media (min-width: 768px) { 
+     
+ }
+
+
+ @media (min-width: 1200px) {
+    .navbar{
+        width: 60px;
+    }
+    .navbar-item{
+        height: 60px;
+        width: 60px;
+        flex-flow: row nowrap;
+    }
+    .navbar-item .item-label{
+        left: 60px;
+        position: absolute;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        margin: 5px 0px;
+    }
+
+    .navbar-item:hover .item-label{
+        width: 250%;
+    }
+ }
