@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-##Color Theme
+## Color Theme
 
 bg-dark = #121a21
 bg-light = #2c3e50
@@ -40,3 +40,17 @@ blue-acccent = #7dbde8
 
 white = #ffffff
 black = #000000
+
+## Breakpoints
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
