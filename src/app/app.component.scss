@@ -1,0 +1,17 @@
+@import '../assets/Themes/colors.scss';
+
+.preLoader{
+    display: none;
+    position: absolute;
+    z-index: $z-index5;
+    background:red;
+    height: 100%;
+    width: calc(100% - 60px);
+    box-sizing: border-box;
+}
+
+.preLoaded{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

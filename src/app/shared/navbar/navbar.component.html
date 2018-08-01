@@ -1,0 +1,26 @@
+<a class="navbar-item btn-close" (click)="onBtnClose()">
+    <i class="fa" [class.fa-times]="btnClose" [class.fa-bars]="!btnClose" aria-hidden="true"></i>
+</a>
+
+<div class="navbar" *ngIf="btnClose" (click)="onBtnClose()">
+    <a class="navbar-item" routerLink="/home" routerLinkActive="active">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <div class="item-label">HOME</div>
+    </a>
+    <a class="navbar-item" routerLink="/about" routerLinkActive="active">
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+        <div class="item-label">ABOUT</div>
+    </a>
+    <a class="navbar-item" routerLink="/working-page" routerLinkActive="active">
+        <i class="fa fa-folder-o" aria-hidden="true"></i>
+        <div class="item-label">PORTFOLIO</div>
+    </a>
+    <a class="navbar-item" routerLink="/working-page" routerLinkActive="active">
+        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+        <div class="item-label">BLOG</div>
+    </a>
+    <a class="navbar-item" routerLink="/working-page" routerLinkActive="active">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <div class="item-label">CONTACT</div>
+    </a>
+</div>

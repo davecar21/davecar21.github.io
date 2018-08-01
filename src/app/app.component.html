@@ -1,1 +1,8 @@
-TEST DAVE
+<app-navbar></app-navbar>
+
+<div class="content">
+    <div [class.preLoaded]="preLoader" class="preLoader">
+            <h2>LOADER</h2>
+    </div>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>
