@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,18 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'davecar-profile';
-  preLoader: boolean;
-
+  preLoaderStatus: boolean;
 
   ngOnInit() {
   }
 
   onActivate(event: any) {
-    this.preLoader = true;
-    console.log(this.preLoader);
+    this.preLoaderStatus = true;
     setTimeout(() => {
-      this.preLoader = false;
-    }, 1000);
+      this.preLoaderStatus = false;
+    }, 2500);
   }
 
 }

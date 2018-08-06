@@ -1,26 +1,42 @@
-<a class="navbar-item btn-close" (click)="onBtnClose()">
+<a class="btn-close" (click)="onBtnClose()">
     <i class="fa" [class.fa-times]="btnClose" [class.fa-bars]="!btnClose" aria-hidden="true"></i>
 </a>
 
 <div class="navbar" *ngIf="btnClose" (click)="onBtnClose()">
-    <a class="navbar-item" routerLink="/home" routerLinkActive="active">
-        <i class="fa fa-home" aria-hidden="true"></i>
-        <div class="item-label">HOME</div>
-    </a>
-    <a class="navbar-item" routerLink="/about" routerLinkActive="active">
-        <i class="fa fa-user-o" aria-hidden="true"></i>
-        <div class="item-label">ABOUT</div>
-    </a>
-    <a class="navbar-item" routerLink="/working-page" routerLinkActive="active">
-        <i class="fa fa-folder-o" aria-hidden="true"></i>
-        <div class="item-label">PORTFOLIO</div>
-    </a>
-    <a class="navbar-item" routerLink="/working-page" routerLinkActive="active">
-        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-        <div class="item-label">BLOG</div>
-    </a>
-    <a class="navbar-item" routerLink="/working-page" routerLinkActive="active">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-        <div class="item-label">CONTACT</div>
-    </a>
+    <div class="navbar_item">
+        <object class="logo" data="../assets/Images/logo-white.svg"></object>
+    </div>
+    <div class="navbar_item">
+            <a class="navbar_link" routerLink="/working-page" routerLinkActive="active">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <div class="link_label">HOME</div>
+            </a>
+            <a class="navbar_link" routerLink="/working-page" routerLinkActive="active">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <div class="link_label">ABOUT</div>
+            </a>
+            <a class="navbar_link" routerLink="/working-page" routerLinkActive="active">
+                <i class="fa fa-folder-o" aria-hidden="true"></i>
+                <div class="link_label">PORTFOLIO</div>
+            </a>
+            <a class="navbar_link" routerLink="/working-page" routerLinkActive="active">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <div class="link_label">BLOG</div>
+            </a>
+            <a class="navbar_link" routerLink="/working-page" routerLinkActive="active">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <div class="link_label">CONTACT</div>
+            </a>
+    </div>
+    <div class="navbar_item navbar-social">
+            <a class="navbar_link" href="https://www.linkedin.com/in/davecargrave//" target="blank">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a class="navbar_link" href="https://www.instagram.com/deibu21/" target="blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="navbar_link" href="https://stackoverflow.com/users/7963542/davecar21" target="blank">
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+            </a>
+    </div>
 </div>
