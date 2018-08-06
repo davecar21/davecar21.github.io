@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+
+$z-index1: 100;
+$z-index2: 200;
+$z-index3: 300;
+$z-index4: 400;
+$z-index5: 500;
+
+// flex center
+@mixin flex-vh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// flex horizontal
+@mixin flex-h{
+    display: flex;
+    align-items: center;
+}
+// flex vertical
+@mixin flex-v{
+    display: flex;
+    justify-content: center;
+}
+
+// vendor mixin
+$vendors: (
+    '-webkit-', '-moz-', '-ms-','-o-'
+);
+@mixin vendor($prop,$val...) {
+    @each $key in $vendors {
+        #{$key}#{$prop}:$val;
+    }   
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content; 
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    } 
+  }
