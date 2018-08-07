@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+$font-small: 0.5rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-xlarge: 2rem;
 
 $z-index1: 100;
 $z-index2: 200;
@@ -50,4 +54,17 @@ $vendors: (
     @keyframes #{$name} {
       @content;
     } 
+  }
+
+  // media query mixin
+  @mixin medium-screen {
+    @media only screen and (min-width: 768px) {
+        @content;
+    } 
+  }
+
+  @mixin large-screen {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
   }
