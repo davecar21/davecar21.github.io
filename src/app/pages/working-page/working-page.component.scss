@@ -1,3 +1,6 @@
+@import '../../../assets/Themes/colors.scss';
+@import '../../../assets/Themes/global.scss';
+
 .container {
     position: absolute;
     top: 50%;
@@ -11,14 +14,14 @@
 
 .container object {
     height: auto;
-    width: 30%;
+    width: 50%;
     display: inline-block;
     animation: rotate ease 5s infinite;
 }
 
 .container p {
     font-size: 3em;
-    color: #3f5973;
+    color: var(--blue-dark);
 }
 
 @keyframes rotate {
@@ -33,5 +36,12 @@
     }
     100% {
         transform: rotateY(360deg)
+    }
+}
+
+
+@include large-screen{
+    .container object{
+        width: 30%;
     }
 }

@@ -5,7 +5,7 @@
     display: none;
     position: absolute;
     z-index: $z-index5;
-    background: $bg-dark;
+    background: var(--bg-dark);
     height: 100%;
     width:100%;
     box-sizing: border-box;

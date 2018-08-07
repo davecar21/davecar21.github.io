@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './assets/Themes/colors.scss';
+@import './assets/Themes/global.scss';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html,
@@ -15,15 +16,15 @@ body {
 a {
     outline : none;
     text-decoration: none;
-    color: $blue-dark;
+    color: var(--blue-dark);
     transition: all ease 0.5;
     &:hover{
-        color: $blue-accent;
+        color: var(--blue-accent);
     }
 }
 
 .content {
-    background: $bg-dark;
+    background: var(--bg-dark);
     height: 100%;
     width:100%;
     box-sizing: border-box;
@@ -32,9 +33,4 @@ a {
 .fa{
     font-size: $font-large;
     transition: all ease 0.5s;
-}
-
-@media screen and (min-width: 1200px){
-    margin-left: 60px;
-    width: calc(100% - 60px);
 }
