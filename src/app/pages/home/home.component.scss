@@ -1,0 +1,95 @@
+@import '../../../assets/Themes/colors.scss';
+@import '../../../assets/Themes/global.scss';
+
+span{
+    display: inline-block;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    @include flex-vh;
+    flex-flow: column nowrap;
+    &-name{
+        font-family: $font-head;
+        color: var(--blue-light);
+    }
+    
+    &-title{
+        font-family: $font-text;
+        color: var(--blue-accent);
+        margin-bottom: 10px;
+    }
+    
+    &-text{
+        position: relative;
+        font-family: $font-text;
+        color: var(--blue-dark);
+    }
+}
+
+@include medium-screen{
+    .content{
+        &-name{
+            font-size: 8vw;
+        }
+        
+        &-title{
+            font-size: 4vw;
+        }
+        
+        &-text{
+            font-size: 2.5vw;
+            .fa{
+                font-size: 2.5vw;
+            }
+        }
+    }
+
+    .text-switch1{
+        color: var(--blue-light);
+        position: relative;
+        overflow: hidden;
+        vertical-align: top;
+        padding: 0px 1vw;
+        width: 12vw; // width 6vw
+        @include vendor(animation, s1-anim 1500ms ease-in 5100ms);
+        animation-fill-mode: forwards;
+        .text-coffee{
+            position: absolute;
+            left: 1.5vw;
+            top:0;
+            @include vendor(animation, s1-coffee 1500ms ease-in 5200ms);
+            animation-fill-mode: forwards;
+        }
+        .text-logo{
+            position: absolute;
+            left: 5vw; // 1.5vw
+            opacity: 0;
+            bottom: -3vw;
+            @include vendor(animation, s1-logo 1500ms ease-in 5000ms);
+            animation-fill-mode: forwards;
+        }
+    }
+    
+}
+
+@include keyframes (s1-anim){
+    100%{
+        width: 5vw;
+    }
+}
+@include keyframes (s1-coffee){
+    100%{
+        left: -1.5vw;
+        top: -3vw; 
+    }
+}
+
+@include keyframes (s1-logo){
+    100%{
+        left: 1.5vw;
+        bottom: 0;
+        opacity: 1;
+    }
+}

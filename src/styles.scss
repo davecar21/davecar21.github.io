@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import './assets/Themes/colors.scss';
 @import './assets/Themes/global.scss';
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 html,
 body {
@@ -10,7 +12,7 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-text;
 }
 
 a {
@@ -27,10 +29,18 @@ a {
     background: var(--bg-dark);
     height: 100%;
     width:100%;
+    padding: 5%;
     box-sizing: border-box;
 }
 
 .fa{
     font-size: $font-large;
     transition: all ease 0.5s;
+}
+
+
+@include large-screen{
+    .content{
+        padding: 5% 5% 5% 10%;
+    }
 }

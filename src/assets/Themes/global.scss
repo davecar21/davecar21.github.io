@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+p,
+span{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+$font-head: 'Lato', sans-serif;
+$font-text: 'Roboto', sans-serif;
+
+
 $font-small: 0.5rem;
 $font-medium: 1rem;
 $font-large: 1.5rem;
@@ -32,7 +45,7 @@ $z-index5: 500;
 
 // vendor mixin
 $vendors: (
-    '-webkit-', '-moz-', '-ms-','-o-'
+    '-webkit-', '-moz-', '-ms-','-o-',''
 );
 @mixin vendor($prop,$val...) {
     @each $key in $vendors {

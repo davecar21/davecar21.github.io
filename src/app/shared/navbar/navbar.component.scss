@@ -60,7 +60,7 @@
 
 .navbar_link-active{
     background: var(--blue-dark);
-    color: var(--gray-light);
+    color: var(--blue-accent);
 }
 
 .navbar-social{
@@ -80,9 +80,10 @@
 
 
 @include medium-screen {
-    .navbar_link{
-        font-size: $font-large;
+    .btn-close{
+        font-size: $font-xlarge;
     }
+
 }
 
 @include large-screen {
@@ -110,11 +111,14 @@
         position: absolute;
         overflow: hidden;
         white-space: nowrap;
-        padding: 0;
+        height: 100%;
         width: 0;
+        margin:0;
+        padding: 0;
+        background: var(--bg-darker);
     }
     .navbar_link:hover .link_label {
-        width: 250%;
+        width: 160%;
     }
 }
     

@@ -1,12 +1,11 @@
 :root {
-    --bg-darker: #121a21;
-    --bg-dark: rgb(36, 52, 66);
-    --bg-light: #2c3e50;
-    --bg-accent: #3f5973;
-    --blue-dark: #2980b9;
-    --blue-light: #3498db;
-    --blue-accent: #7dbde8;
-    --gray-light: #ecf0f1;
-    --gray-accent: #95a5a6;
-    --gray-dark: #7f8c8d;
+    --bg-darker: #121a21; // 10% L/D
+    --bg-dark: #243442; // 20%
+    --bg-light: #2c3e50; // 24%
+    --bg-accent: #3f5973; // 35%
+
+    --blue-darker:  #1c567d; // 30% L/D
+    --blue-dark: #2f90d0; // 50% 
+    --blue-light: #82bce3; // 70% 
+    --blue-accent: #d5e9f6; // 85%
 }

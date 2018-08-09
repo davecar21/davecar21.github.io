@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 
-<div class="content">
-    <div [class.preLoaded]="preLoaderStatus" class="preLoader">
-        <div class="logo-container">
-            <object class="logo" data="../assets/Images/logo-preloader.svg"></object>
-        </div>
+<div [class.preLoaded]="preLoaderStatus" class="preLoader">
+    <div class="logo-container">
+        <object class="logo" data="../assets/Images/logo-preloader.svg"></object>
     </div>
+</div>
+<div class="content">
     <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
