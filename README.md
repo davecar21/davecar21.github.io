@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO
 
+material color https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+
 ADD OVERLAY in MENUS when preloader is visible
 
 onclick menus trigger preloader
