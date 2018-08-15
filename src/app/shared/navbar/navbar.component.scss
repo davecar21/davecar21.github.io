@@ -17,17 +17,25 @@
     width: 100%;
     @include flex-vh;
     flex-flow: column nowrap;
-    .logo {
-        height: 75px;
-        width: 60px;
-        padding: 5px 5px;
-        margin-bottom: 5px;
-        transition: all ease-in 2.5s;
-        &:hover{
-            transform: rotateY(360deg);
-        }
-    }
 }
+
+.logo {
+    height: 75px;
+    width: 60px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    transition: all ease-in 2.5s;
+}
+
+.logo-mobile{
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: var(--bg-darker);
+    @extend .logo;
+    padding: 0px 1vw;
+}
+
 
 .navbar_link {
     display: flex;
@@ -43,7 +51,7 @@
     &:hover {
         background: var(--bg-light);
         cursor: pointer;
-        .fa {
+        .fas, .far, .fab {
             transition: all ease 0.5s;
         }
     }
@@ -77,12 +85,21 @@
     height: 50px;
     border-radius: 10px;
     font-size: $font-large;
+    cursor: pointer;
 }
 
 
 @include medium-screen {
     .btn-close{
         font-size: $font-xlarge;
+        .fas{
+            transition: all ease-in 0.5s;
+        }
+        &:hover .fas{
+            -ms-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+            color:var(--blue-accent);
+        }
     }
 
 }
@@ -124,3 +141,10 @@
     }
 }
     
+
+
+@include large-screen{
+    .logo-mobile{
+        display: none;
+    }
+} 

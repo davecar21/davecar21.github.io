@@ -13,6 +13,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: $font-text;
+    background: var(--bg-dark);
 }
 
 a {
@@ -29,7 +30,7 @@ a {
     background: var(--bg-dark);
     height: 100%;
     width:100%;
-    padding: 5%;
+    padding: 80px 2vw 2vw 2vw;
     box-sizing: border-box;
 }
 
@@ -37,9 +38,8 @@ a {
     transition: all ease 0.5s;
 }
 
-
 @include large-screen{
     .content{
-        padding: 5% 5% 5% 10%;
+        padding: 2vw 2vw 2vw 6vw;
     }
 }

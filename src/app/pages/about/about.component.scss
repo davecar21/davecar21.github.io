@@ -1,0 +1,53 @@
+@import '../../../assets/Themes/colors.scss';
+@import '../../../assets/Themes/global.scss';
+
+
+.about{
+    @include flex-vh;
+    flex-flow: column wrap;
+    color: var(--blue-accent);
+    letter-spacing: 1px;
+    line-height: 5vh;
+    font-family: $font-text;
+    font-size: $font-medium;
+    &-header{
+        font-family: $font-head;
+        font-size: $font-large;
+        color: var(--blue-light);
+    }
+    &-link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    &-link_item{
+        padding: 0 1vw;
+    }
+}
+
+
+
+@include medium-screen{
+    .about{
+        height: 100%;
+        flex-flow: row wrap;
+        &-content{
+            padding: 1vw;
+            width: 100%;
+        }
+    }
+}
+
+@include large-screen{
+    .about{
+
+        &-content{
+            padding: 1vw;
+            width: 60%;
+        }
+        &-skills{
+            width: 40%;
+        }
+    }
+}
