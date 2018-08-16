@@ -7,11 +7,13 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { WorkingPageComponent } from './pages/working-page/working-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { SkillsComponent } from './pages/skills/skills.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'skills', component: SkillsComponent },
   { path: 'working-page', component: WorkingPageComponent },
   // {
   //   path: 'heroes',
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     WorkingPageComponent,
     NavbarComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

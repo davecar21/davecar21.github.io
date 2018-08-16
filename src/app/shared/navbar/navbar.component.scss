@@ -101,7 +101,9 @@
             color:var(--blue-accent);
         }
     }
-
+    .navbar_link {
+        font-size: $font-xlarge;
+    }
 }
 
 @include large-screen {
