@@ -1,0 +1,33 @@
+<div class="contact">
+  <div class="contact-content">
+      <h1 class="about-header">
+          Let's Get in Touch.
+      </h1>  
+      <p>Got some awesome ideas?</p>
+      <p>Do you have questions, feedbacks or inquiries?</p>
+      <p>Please feel free to share and send me a message.</p>
+      <p>or email me at <b>davecargrave@gmail.com</b></p>
+      <p>I'd love to hear from you! Let's build something awesome.</p>
+  </div>
+  <div class="contact-content">
+    <ng-template [ngIf]="!isSubmitted" [ngIfElse]="loading">
+        <h1 class="about-header">
+            Send Me a Message.
+        </h1>
+        <form target="hidden_iframe" [action]="dataLink" [formGroup]="contact" method="POST" (ngSubmit)="onSubmit()" #contactForm>
+          <input type="text" formControlName="name" placeholder="Name" name="name" required>
+          <input type="text" formControlName="email" placeholder="Email" name="email" required>
+          <textarea maxlength="50" rows="4" cols="50" formControlName="message" placeholder="Message" name="message" required></textarea>
+          <button [disabled]="contact.status == 'INVALID' && contact.dirty" (click)="contactForm.submit()">SEND</button>
+        </form>
+    </ng-template>
+    <ng-template #loading>
+        <div class="contact-sent">
+            <i class="fas fa-check"></i>
+            <p>Message Sent!</p>
+            <p>Thanks for your message.</p>
+            <p>Will get back to you as soon as possible.</p>
+        </div>
+    </ng-template>
+  </div>
+</div>

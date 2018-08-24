@@ -1,0 +1,132 @@
+@import '../../../assets/Themes/colors.scss';
+@import '../../../assets/Themes/global.scss';
+
+
+:-ms-input-placeholder{
+    color: var(--blue-accent);
+}
+::-ms-input-placeholder{
+    color: var(--blue-accent);
+}
+::placeholder {
+    color: var(--blue-accent);
+}
+
+input, button{
+    display: block;
+    width: 441px;
+    margin: 0 auto;
+    transition: all ease-in 0.5s;
+}
+
+button{
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--blue-dark);
+    color: var(--blue-accent);
+    letter-spacing: 5px;
+}
+
+textarea{
+    resize: none;
+}
+
+input, textarea, button{
+    font-family: $font-text;
+    letter-spacing: 1px;
+    font-size: $font-medium;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: var(--bg-dark);
+    color: var(--blue-light);
+    border: solid 2px var(--blue-darker);
+    transition: all ease-in 0.5s;
+}
+
+input:focus, textarea:focus{
+    border: solid 2px var(--blue-dark);
+}
+
+
+button:disabled{
+    border-color:var(--red-darker);
+}
+
+.ng-invalid.ng-dirty{
+    border-color:var(--red-darker);
+}
+
+.contact{
+    display: flex;
+    flex-flow: column wrap;
+    color: var(--blue-accent);
+    letter-spacing: 1px;
+    line-height: 2;
+    font-family: $font-text;
+    font-size: $font-medium;
+    &-content{
+        text-align: center;
+        margin: 5vw;
+        width: 100%;
+    }
+    &-header{
+        font-family: $font-head;
+        font-size: $font-large;
+        color: var(--blue-light);
+    }
+    &-sent{
+        animation: mail-sent 1s ease-in;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        .fa-check{
+            color: car(-green-darker);
+            font-size: 25px;
+        }
+    }
+}
+
+
+
+@include medium-screen{
+    .contact{
+        height: 100%;
+        align-items: center;
+        &-content{
+            padding: 1vw;
+            margin: 1vw 0;
+        }
+        &-content:first-child{
+            padding-right: 5vw;
+        }
+        &-link_item{
+            width: 30%;
+        }
+    }
+}
+
+@include large-screen{
+    .contact{
+        flex-flow: row  nowrap;
+        &-content{
+            padding: 1vw;
+            width: 50%;
+        }
+        &-content:first-child{
+            padding-right: 2vw;
+        }
+    }
+}
+
+
+
+@include keyframes(mail-sent){
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

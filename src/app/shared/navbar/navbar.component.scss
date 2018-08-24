@@ -2,7 +2,7 @@
 @import '../../../assets/Themes/global.scss';
 
 .navbar {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
