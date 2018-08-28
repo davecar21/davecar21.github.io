@@ -1,17 +1,18 @@
 <div class="contact">
   <div class="contact-content">
-      <h1 class="about-header">
+      <h1 class="contact-header">
           Let's Get in Touch.
       </h1>  
       <p>Got some awesome ideas?</p>
       <p>Do you have questions, feedbacks or inquiries?</p>
       <p>Please feel free to share and send me a message.</p>
       <p>or email me at <b>davecargrave@gmail.com</b></p>
-      <p>I'd love to hear from you! Let's build something awesome.</p>
+      <p>I'd love to hear from you!</p>
+      <p>Let's build something awesome.</p>
   </div>
   <div class="contact-content">
     <ng-template [ngIf]="!isSubmitted" [ngIfElse]="loading">
-        <h1 class="about-header">
+        <h1 class="contact-header">
             Send Me a Message.
         </h1>
         <form target="hidden_iframe" [action]="dataLink" [formGroup]="contact" method="POST" (ngSubmit)="onSubmit()" #contactForm>

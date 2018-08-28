@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-working-page',
   templateUrl: './working-page.component.html',
   styleUrls: ['./working-page.component.scss']
 })
-export class WorkingPageComponent implements OnInit {
+export class WorkingPageComponent implements AfterViewInit {
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = 'http://somedomain.com/somescript';
+    this.elementRef.nativeElement.appendChild(s);
   }
 
 }

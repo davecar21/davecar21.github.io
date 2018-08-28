@@ -1,0 +1,47 @@
+@import '../../../assets/Themes/colors.scss';
+@import '../../../assets/Themes/global.scss';
+
+.adsbygoogle{
+    position: fixed;
+    right: 0;
+    top: 5%;
+}
+
+.blog{
+    @include flex-vh;
+    flex-flow: column wrap;
+    color: var(--blue-accent);
+    letter-spacing: 1px;
+    line-height: 2;
+    font-family: $font-text;
+    font-size: $font-medium;
+    &-header{
+        font-family: $font-head;
+        font-size: $font-large;
+        color: var(--blue-light);
+        margin: 10px 0px;
+        transition: all ease 1s;
+    }
+    &-body{
+        cursor: pointer;
+        font-family: $font-text;
+        font-size: $font-medium;
+        color: var(--blue-accent);
+        margin: 1rem 0px;
+        padding: 1rem;
+        width: 100%;
+    }
+    &-body:hover &-header{
+        color: var(--blue-dark);
+    }
+}
+
+
+@include large-screen{
+    .blog{
+
+        &-body{
+            width: 80%;
+        }
+    }
+}

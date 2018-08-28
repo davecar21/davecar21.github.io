@@ -1,0 +1,20 @@
+
+
+<section class="blog">
+  <button (click)="resetFilter()">View All Blog</button>
+  <article class="blog-body" *ngFor="let data of currentContent" (click)="filterBlog(data.name)">
+    <h4 class="blog-header" [innerHtml]="data.name | domSanitize"></h4>
+    <p class="blog-description" *ngIf="!isContentFiltered" [innerHtml]="data.description"></p>
+    <div class="blog-content" *ngIf="isContentFiltered" [innerHtml]="data.content | domSanitize"></div>
+    <div class="blog-tags">
+      <span *ngFor="let dataTags of data.tags">{{dataTags}}</span>
+    </div>
+  </article>
+
+  <!-- Ads -->
+  <ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:600px"
+     data-ad-client="ca-pub-8475334085101638"
+     data-ad-slot="3537005041"></ins>
+
+</section>

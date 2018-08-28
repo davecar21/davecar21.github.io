@@ -14,8 +14,6 @@
 
 input, button{
     display: block;
-    width: 441px;
-    margin: 0 auto;
     transition: all ease-in 0.5s;
 }
 
@@ -44,6 +42,13 @@ input, textarea, button{
     color: var(--blue-light);
     border: solid 2px var(--blue-darker);
     transition: all ease-in 0.5s;
+    width: 80%;
+    @include medium-screen{
+        width: 100%;
+    }
+    @include large-screen{
+        width: 80%;
+    }
 }
 
 input:focus, textarea:focus{
@@ -68,14 +73,14 @@ button:disabled{
     font-family: $font-text;
     font-size: $font-medium;
     &-content{
-        text-align: center;
         margin: 5vw;
-        width: 100%;
+        height: 50%;
     }
     &-header{
         font-family: $font-head;
         font-size: $font-large;
-        color: var(--blue-light);
+        color: var(--blue-dark);
+        margin: 1rem 0;
     }
     &-sent{
         animation: mail-sent 1s ease-in;
@@ -92,7 +97,6 @@ button:disabled{
 
 @include medium-screen{
     .contact{
-        height: 100%;
         align-items: center;
         &-content{
             padding: 1vw;
@@ -109,6 +113,7 @@ button:disabled{
 
 @include large-screen{
     .contact{
+        height: 100%;
         flex-flow: row  nowrap;
         &-content{
             padding: 1vw;
