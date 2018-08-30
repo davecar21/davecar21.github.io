@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -9,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'davecar-profile';
   preLoaderStatus: boolean;
+  toggleBlog: boolean;
+
+  constructor(private location: Location) {
+
+  }
+
 
   ngOnInit() {
   }
@@ -18,6 +25,11 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.preLoaderStatus = false;
     }, 2500);
+    if (this.location.path() === '/blog') {
+      this.toggleBlog = true;
+    } else {
+      this.toggleBlog = false;
+    }
   }
 
 }

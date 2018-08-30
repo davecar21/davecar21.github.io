@@ -32,7 +32,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('submit');
     this.isSubmitted = this.isSubmitted ? false : true;
   }
 

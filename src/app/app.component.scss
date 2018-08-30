@@ -1,6 +1,14 @@
 @import '../assets/Themes/colors.scss';
 @import '../assets/Themes/global.scss';
 
+.adsbygoogle{
+    opacity: 0;
+}
+
+.isBlog{
+    opacity: 1;
+}
+
 .preLoader{
     display: none;
     position: absolute;

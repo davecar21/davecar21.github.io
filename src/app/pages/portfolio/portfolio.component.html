@@ -1,0 +1,12 @@
+<i *ngIf="toggleDetails" (click)="resetFilter()" class="fas fa-chevron-circle-left" aria-hidden="true"></i>
+<section class="pf">
+  <article class="pf-content" [class.is-showDetails]="toggleDetails" *ngFor="let pf of currentContent" (click)="filterBlog(pf.title)">
+    <div class="pf-header">
+      <img class="pf-img" [src]="pf.img" alt="">
+      <h3 [class.is-hidden]="toggleTitle" class="pf-title">{{pf.title}}</h3>
+    </div>
+    <p class="pf-details" *ngIf="toggleDetails">
+      {{pf.details}}
+    </p>
+  </article>
+</section>

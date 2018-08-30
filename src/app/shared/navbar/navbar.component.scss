@@ -7,7 +7,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    z-index: $z-index1;
+    z-index: $z-index4;
     height: 100%;
     width: 100%;
     background: var(--bg-darker);
@@ -77,7 +77,7 @@
 
 .btn-close{
     @include flex-vh;
-    z-index: $z-index2;
+    z-index: $z-index5;
     position: absolute;
     top: 10px;
     right: 10px;

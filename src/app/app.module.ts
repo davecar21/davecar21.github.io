@@ -14,6 +14,7 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { DomSanitizePipe } from './shared/pipes/dom-sanitize.pipe';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'portfolio', component: PortfolioComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'working-page', component: WorkingPageComponent },
   // {
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     SkillsComponent,
     ContactComponent,
     BlogComponent,
-    DomSanitizePipe
+    DomSanitizePipe,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

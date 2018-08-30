@@ -1,11 +1,19 @@
 @import '../../../assets/Themes/colors.scss';
 @import '../../../assets/Themes/global.scss';
 
-.adsbygoogle{
-    position: fixed;
-    right: 0;
-    top: 5%;
+.fa-chevron-circle-left{
+    display: block;
+    margin: 1rem 1rem 0px 1rem;
+    align-self: end;
+    font-size: 2rem;
+    color: var(--blue-dark);
+    cursor: pointer;
 }
+
+.fa-chevron-circle-left:hover{
+    color: var(--blue-light);
+}
+
 
 .blog{
     @include flex-vh;
@@ -16,6 +24,7 @@
     font-family: $font-text;
     font-size: $font-medium;
     &-header{
+        cursor: pointer;
         font-family: $font-head;
         font-size: $font-large;
         color: var(--blue-light);
@@ -23,7 +32,6 @@
         transition: all ease 1s;
     }
     &-body{
-        cursor: pointer;
         font-family: $font-text;
         font-size: $font-medium;
         color: var(--blue-accent);
@@ -33,6 +41,22 @@
     }
     &-body:hover &-header{
         color: var(--blue-dark);
+    }
+    &-tags{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &-tagsName{
+        margin-right: 10px;
+        background: var(--blue-dark);
+        padding: 0px 15px;
+        border-radius: 5px;
+    }
+}
+
+@include medium-screen{
+    .fa-chevron-circle-left{
+        font-size: 3rem;
     }
 }
 

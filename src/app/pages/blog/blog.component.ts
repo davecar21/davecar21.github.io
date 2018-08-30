@@ -4,7 +4,7 @@ import { Component, AfterViewInit, ViewEncapsulation } from '@angular/core';
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class BlogComponent implements AfterViewInit {
 
@@ -76,12 +76,7 @@ export class BlogComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-    try {
-      (window['adsbygoogle'] = window['adsbygoogle'] || []).push({});
-      console.log('adsbygoogle');
-    } catch (e) {
-      console.error(e);
-    }
+
   }
 
 }

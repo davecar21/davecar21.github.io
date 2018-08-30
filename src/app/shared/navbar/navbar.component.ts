@@ -10,20 +10,17 @@ export class NavbarComponent implements OnInit {
   btnClose = false;
   windowWidth: number;
 
-
   constructor() { }
 
   ngOnInit() {
     this.windowWidth = window.innerWidth;
     this.onChangeWindowSize(this.windowWidth);
-    // console.log('onInit' + this.windowWidth);
   }
 
   @HostListener('window:resize', ['$event'])
     onResize(event) {
     this.windowWidth = event.target.innerWidth;
     this.onChangeWindowSize(this.windowWidth);
-    // console.log('onResize' + this.windowWidth);
   }
 
   onBtnClose() {
