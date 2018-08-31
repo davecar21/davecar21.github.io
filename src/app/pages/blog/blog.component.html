@@ -3,8 +3,9 @@
 
 <section class="blog">
     <i *ngIf="isContentFiltered" (click)="resetFilter()" class="fas fa-chevron-circle-left" aria-hidden="true"></i>
-  <article class="blog-body" *ngFor="let data of currentContent" (click)="filterBlog(data.name)">
-    <h4 class="blog-header" [innerHtml]="data.name | domSanitize"></h4>
+  <article class="blog-body" *ngFor="let data of currentContent" (click)="filterBlog(data)">
+    <a [href]="data.link" target="_blank" *ngIf="data.link !== ''"><h4 class="blog-header" [innerHtml]="data.name | domSanitize"></h4></a>
+    <h4 *ngIf="data.link === ''" class="blog-header" [innerHtml]="data.name | domSanitize"></h4>
     <p class="blog-description" *ngIf="!isContentFiltered" [innerHtml]="data.description"></p>
     <div class="blog-content" *ngIf="isContentFiltered" [innerHtml]="data.content | domSanitize"></div>
     <div class="blog-tags">

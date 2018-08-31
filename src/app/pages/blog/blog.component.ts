@@ -15,57 +15,25 @@ export class BlogComponent implements AfterViewInit {
 
   datatest = [
     {
-      name: 'Sample Title',
-      description: 'Sample Description',
-      content:
-      `<h4>content</h4>
-      <p>
-      content here again
-      content here again
-      content here again
-      content here again
-      content here again
-      <br>
-      <pre>
-      .hover-target:hover + .hover-element{
-        opacity: 1;
-        transform: translateX(0);
-      }
-      .hover-element{
-          border-radius: 5px;
-          background: #c0392b;
-          margin: 0px 10px;
-          text-align: center;
-          padding: 5px 10px;
-          opacity: 0;
-          transform: translateX(40px);
-          transition: all 1.5s ease;
-        }
-      </pre>
-      </p>
-      `,
-      tags: ['CSS', 'HTML']
-    },
-    {
-      name: 'Title',
-      description: 'Sample Description',
-      content: '<h4>Title content</h4>',
-      tags: ['CSS', 'HTML']
-    },
-    {
-      name: 'Data',
-      description: 'Sample Description',
-      content: '<h4>Data content</h4>',
+      name: 'CSS Tips and Tricks Using Pseudo-Class',
+      description: 'Tips and Tricks that you probably not know about Pseudo-Class',
+      link: 'https://codeburst.io/css-tips-and-tricks-using-pseudo-class-fa83248bb6e0',
+      content: '',
       tags: ['CSS', 'HTML']
     }
     ];
+    // content | link should be '' to initialize the condition.
+
 
     currentContent = this.datatest;
 
   filterBlog(filterItem) {
-    this.isContentFiltered = true;
-    this.currentContent = this.datatest.filter(content => content.name === filterItem);
-    console.log(this.currentContent);
+    if (filterItem.content !== '') {
+      this.isContentFiltered = true;
+      this.currentContent = this.datatest.filter(content => content.name === filterItem.name);
+    } else {
+
+    }
   }
 
   resetFilter() {

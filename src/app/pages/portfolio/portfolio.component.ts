@@ -13,35 +13,12 @@ export class PortfolioComponent implements OnInit {
 
   pfData = [
     {
-      img: 'https://via.placeholder.com/150x150',
-      title: 'title1 title1 title1',
-      details: 'details1 details1 details1'
-    },
-    {
-      img: 'https://via.placeholder.com/150x150',
-      title: 'title2',
-      details: 'details2'
-    },
-    {
-      img: 'https://via.placeholder.com/150x150',
-      title: 'title3',
-      details: 'details3'
-    },
-    {
-      img: 'https://via.placeholder.com/150x150',
-      title: 'title4',
-      details: 'details4'
-    },
-    {
-      img: 'https://via.placeholder.com/150x150',
-      title: 'title5',
-      details: 'details5'
-    },
-    {
-      img: 'https://via.placeholder.com/150x150',
-      title: 'title6',
-      details: 'details6'
-    },
+      img: 'https://drive.google.com/uc?export=view&id=1wvHRLtMFX2Sd5Y3hQ1UpPBzJx3mwFzMR',
+      title: 'Personal Logo',
+      details: `My Personal Logo
+      I created this logo to represent as my personal logo identity.
+      I use Flat Design Long Shadow for the design.`
+    }
   ];
 
   currentContent = this.pfData;
