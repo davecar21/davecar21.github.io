@@ -19,13 +19,18 @@
     @include flex-vh;
     flex-flow: column nowrap;
     &-content{
+      line-height: 25px;
       width: 100%;
       @include flex-vh;
       flex-flow: column nowrap;
       margin: 1rem 0;
     }
     &-header{
-      @include flex-vh;
+      min-height: 200px;
+      min-width: 150px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       flex-flow: column nowrap;
     }
     &-title{
@@ -35,6 +40,7 @@
       transition: all ease 1s;
     }
     &-details{
+      padding: 15px 0px;
       color: var(--blue-light);
     }
     &-img{
@@ -55,11 +61,8 @@
       &-content:hover{
         
         .pf-title{
-          opacity: 1;
+          color: var(--blue-light);
         }
-      }
-      &-title{
-        opacity: 0;
       }
     }
   }

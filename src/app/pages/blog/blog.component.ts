@@ -20,6 +20,13 @@ export class BlogComponent implements AfterViewInit {
       link: 'https://codeburst.io/css-tips-and-tricks-using-pseudo-class-fa83248bb6e0',
       content: '',
       tags: ['CSS', 'HTML']
+    },
+    {
+      name: 'CSS Keyframe Animation with Pause between Keyframes',
+      description: 'Once the CSS keyframe animation starts, we cannot pause it unless we will use javascript. So how can we make the animation to pause between keyframes?',
+      link: 'https://codeburst.io/css-keyframe-animation-with-pause-between-keyframes-50a3b3d14354',
+      content: '',
+      tags: ['CSS']
     }
     ];
     // content | link should be '' to initialize the condition.
@@ -44,7 +51,11 @@ export class BlogComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-
-  }
+    try {
+      (window['adsbygoogle'] = window['adsbygoogle'] || []).push({});
+    } catch (e) {
+      console.error('error');
+    }
+}
 
 }
