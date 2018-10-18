@@ -3,7 +3,11 @@
 }
 
 p,
-span{
+span,
+h1,
+h2,
+h3,
+h4{
     margin: 0;
     padding: 0;
     border: 0;
@@ -25,6 +29,9 @@ $z-index2: 200;
 $z-index3: 300;
 $z-index4: 400;
 $z-index5: 500;
+
+
+
 
 // flex center
 @mixin flex-vh{
