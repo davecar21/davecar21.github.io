@@ -6,6 +6,8 @@
 @import './assets/Themes/global.scss';
 
 
+
+
 html,
 body {
     height: 100%;
@@ -32,6 +34,7 @@ a {
     width:100%;
     padding: 80px 2vw 2vw 2vw;
     box-sizing: border-box;
+    transition: all ease 0.5s;
 }
 
 .fa{

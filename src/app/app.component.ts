@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location } from '@angular/common';
 
 
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   preLoaderStatus: boolean;
   toggleBlog: boolean;
 
-  constructor(private location: Location) {
+  constructor(private location: Location, private elementRef: ElementRef) {
 
   }
 
@@ -29,6 +29,24 @@ export class AppComponent implements OnInit {
       this.toggleBlog = true;
     } else {
       this.toggleBlog = false;
+    }
+  }
+
+  showNavBar(data: string) {
+    if (data == 'dark') {
+      //light
+      this.elementRef.nativeElement.style.setProperty('--bg-darker', '#1c567d'); // bg
+      this.elementRef.nativeElement.style.setProperty('--bg-dark', '#fafafa');  // bg
+      this.elementRef.nativeElement.style.setProperty('--blue-dark', '#121a21'); // font
+      this.elementRef.nativeElement.style.setProperty('--blue-light', '#243442'); // font
+      this.elementRef.nativeElement.style.setProperty('--blue-accent', '#2f90d0'); // font
+    } else {
+      //dark
+      this.elementRef.nativeElement.style.setProperty('--bg-darker', '#121a21'); // bg
+      this.elementRef.nativeElement.style.setProperty('--bg-dark', '#243442');  // bg
+      this.elementRef.nativeElement.style.setProperty('--blue-dark', '#2f90d0'); // font
+      this.elementRef.nativeElement.style.setProperty('--blue-light', 'rgb(130, 188, 226)'); // font
+      this.elementRef.nativeElement.style.setProperty('--blue-accent', '#d5e9f6'); // font
     }
   }
 

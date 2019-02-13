@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,25 +7,38 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  @Output() toggleThemeEmitter: EventEmitter<string> = new EventEmitter<string>();
+
   btnClose = false;
   windowWidth: number;
+  toggleTheme = 'dark';
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
     this.windowWidth = window.innerWidth;
     this.onChangeWindowSize(this.windowWidth);
   }
 
+  onChangeTheme() {
+    console.log('asdd');
+    this.toggleThemeEmitter.emit(this.toggleTheme);
+    if (this.toggleTheme == 'dark') {
+      this.toggleTheme = 'light';
+    } else {
+      this.toggleTheme = 'dark';
+    }
+  }
+
   @HostListener('window:resize', ['$event'])
-    onResize(event) {
+  onResize(event) {
     this.windowWidth = event.target.innerWidth;
     this.onChangeWindowSize(this.windowWidth);
   }
 
   onBtnClose() {
     if (this.windowWidth < 1200) {
-      this.btnClose = this.btnClose ? false : true ;
+      this.btnClose = this.btnClose ? false : true;
     }
   }
 

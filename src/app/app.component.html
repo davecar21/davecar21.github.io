@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar (toggleThemeEmitter)="showNavBar($event)"></app-navbar>
 
 <div [class.preLoaded]="preLoaderStatus" class="preLoader">
     <div class="logo-container">

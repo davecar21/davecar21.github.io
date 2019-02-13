@@ -6,7 +6,7 @@
     margin: 1rem 1rem 0px 1rem;
     align-self: end;
     font-size: 2rem;
-    color: var(--blue-dark);
+    color: var(--blue-darker);
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
         width: 100%;
     }
     &-body:hover &-header{
-        color: var(--blue-dark);
+        color: var(--blue-darker);
     }
     &-tags{
         display: flex;
@@ -48,7 +48,7 @@
     }
     &-tagsName{
         margin-right: 10px;
-        background: var(--blue-dark);
+        background: var(--blue-darker);
         padding: 0px 15px;
         border-radius: 5px;
     }
