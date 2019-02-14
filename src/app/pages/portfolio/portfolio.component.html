@@ -1,15 +1,17 @@
-<i *ngIf="toggleDetails" (click)="resetFilter()" class="fas fa-chevron-circle-left" aria-hidden="true"></i>
-<section class="pf">
-  <article class="pf-content" [class.is-showDetails]="toggleDetails" *ngFor="let pf of currentContent" (click)="filterBlog(pf.title)">
-    <div class="pf-header">
-      <img class="pf-img" [src]="pf.img" alt="">
-      <h3 [class.is-hidden]="toggleTitle" class="pf-title">{{pf.title}}</h3>
-    </div>
-    <u>
-      <a [href]="pf.link" target="_blank" *ngIf="toggleDetails">
-      {{pf.link}}
-      </a>
-    </u>
-    <p class="pf-details" *ngIf="toggleDetails" [innerHtml]="pf.details | domSanitize"></p>
-  </article>
-</section>
+<div class="portfolio">
+  <i *ngIf="toggleDetails" (click)="resetFilter()" class="fas fa-chevron-circle-left" aria-hidden="true"></i>
+  <section class="pf">
+    <article class="pf-content" [class.is-showDetails]="toggleDetails" *ngFor="let pf of currentContent" (click)="filterBlog(pf.title)">
+      <div class="pf-header">
+        <img class="pf-img" [src]="pf.img" alt="">
+        <h3 [class.is-hidden]="toggleTitle" class="pf-title">{{pf.title}}</h3>
+      </div>
+      <u>
+        <a [href]="pf.link" target="_blank" *ngIf="toggleDetails">
+          {{pf.link}}
+        </a>
+      </u>
+      <p class="pf-details" *ngIf="toggleDetails" [innerHtml]="pf.details | domSanitize"></p>
+    </article>
+  </section>
+</div>

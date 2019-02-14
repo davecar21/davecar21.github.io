@@ -1,76 +1,93 @@
 @import '../../../assets/Themes/colors.scss';
 @import '../../../assets/Themes/global.scss';
 
-
-.fa-chevron-circle-left{
-    display: block;
-    margin: 1rem 1rem 0px 1rem;
-    align-self: end;
-    font-size: 2rem;
-    color: var(--blue-dark);
-    cursor: pointer;
+.portfolio {
+  background: var(--bg-dark);
+  padding: 80px 2vw 2vw 2vw;
 }
 
-.fa-chevron-circle-left:hover{
-    color: var(--blue-light);
+@include large-screen{
+  .portfolio {
+    height: 100%;
+  }
 }
 
-.pf{
+.fa-chevron-circle-left {
+  display: block;
+  margin: 1rem 1rem 0px 1rem;
+  align-self: end;
+  font-size: 2rem;
+  color: var(--blue-dark);
+  cursor: pointer;
+}
+
+.fa-chevron-circle-left:hover {
+  color: var(--blue-light);
+}
+
+.pf {
+  @include flex-vh;
+  flex-flow: column nowrap;
+
+  &-content {
+    line-height: 25px;
+    width: 100%;
     @include flex-vh;
     flex-flow: column nowrap;
-    &-content{
-      line-height: 25px;
-      width: 100%;
-      @include flex-vh;
-      flex-flow: column nowrap;
-      margin: 1rem 0;
-    }
-    &-header{
-      min-height: 200px;
-      min-width: 150px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-flow: column nowrap;
-    }
-    &-title{
-      opacity: 1;
-      color: var(--blue-dark);
-      padding: 10px 0px;
-      transition: all ease 1s;
-    }
-    &-details{
-      padding: 15px 0px;
-      color: var(--blue-light);
-    }
-    &-img{
-      width: 150px;
-      cursor: pointer;
-    }
-  }
-  
-  
-  @include medium-screen{
-    .pf{
-      flex-flow: row wrap;
-      &-content{
-        width: calc(100% / 3);
-        margin: 0;
-        padding: 2rem;
-      }
-      &-content:hover{
-        
-        .pf-title{
-          color: var(--blue-light);
-        }
-      }
-    }
-  }
-  
-  .is-hidden{
-    opacity: 1;
+    margin: 1rem 0;
   }
 
-  .is-showDetails{
-    width: 80%;
+  &-header {
+    min-height: 200px;
+    min-width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: column nowrap;
   }
+
+  &-title {
+    opacity: 1;
+    color: var(--blue-dark);
+    padding: 10px 0px;
+    transition: all ease 1s;
+  }
+
+  &-details {
+    padding: 15px 0px;
+    color: var(--blue-light);
+  }
+
+  &-img {
+    width: 150px;
+    cursor: pointer;
+  }
+}
+
+
+@include medium-screen {
+  .pf {
+    flex-flow: row wrap;
+
+    &-content {
+      width: calc(100% / 3);
+      margin: 0;
+      padding: 2rem;
+    }
+
+    &-content:hover {
+
+      .pf-title {
+        color: var(--blue-light);
+      }
+    }
+  }
+}
+
+.is-hidden {
+  opacity: 1;
+}
+
+.is-showDetails {
+  width: 80%;
+}

@@ -68,6 +68,8 @@ button:disabled{
     display: flex;
     flex-flow: column wrap;
     color: var(--blue-accent);
+    background: var(--bg-dark);
+    padding: 80px 2vw 2vw 5vw;
     letter-spacing: 1px;
     line-height: 2;
     font-family: $font-text;

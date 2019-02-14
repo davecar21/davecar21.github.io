@@ -1,71 +1,78 @@
 @import '../../../assets/Themes/colors.scss';
 @import '../../../assets/Themes/global.scss';
 
-.fa-chevron-circle-left{
-    display: block;
-    margin: 1rem 1rem 0px 1rem;
-    align-self: end;
-    font-size: 2rem;
-    color: var(--blue-darker);
+.fa-chevron-circle-left {
+  display: block;
+  margin: 1rem 1rem 0px 1rem;
+  align-self: end;
+  font-size: 2rem;
+  color: var(--blue-darker);
+  cursor: pointer;
+}
+
+.fa-chevron-circle-left:hover {
+  color: var(--blue-light);
+}
+
+
+.blog {
+  @include flex-vh;
+  flex-flow: column wrap;
+  color: var(--blue-accent);
+  background: var(--bg-dark);
+  padding: 80px 2vw 2vw 2vw;
+  letter-spacing: 1px;
+  line-height: 2;
+  font-family: $font-text;
+  font-size: $font-medium;
+
+  &-header {
     cursor: pointer;
-}
-
-.fa-chevron-circle-left:hover{
+    font-family: $font-head;
+    font-size: $font-large;
     color: var(--blue-light);
-}
+    margin: 10px 0px;
+    transition: all ease 1s;
+  }
 
-
-.blog{
-    @include flex-vh;
-    flex-flow: column wrap;
-    color: var(--blue-accent);
-    letter-spacing: 1px;
-    line-height: 2;
+  &-body {
     font-family: $font-text;
     font-size: $font-medium;
-    &-header{
-        cursor: pointer;
-        font-family: $font-head;
-        font-size: $font-large;
-        color: var(--blue-light);
-        margin: 10px 0px;
-        transition: all ease 1s;
-    }
-    &-body{
-        font-family: $font-text;
-        font-size: $font-medium;
-        color: var(--blue-accent);
-        margin: 1rem 0px;
-        padding: 1rem;
-        width: 100%;
-    }
-    &-body:hover &-header{
-        color: var(--blue-darker);
-    }
-    &-tags{
-        display: flex;
-        flex-flow: row wrap;
-    }
-    &-tagsName{
-        margin-right: 10px;
-        background: var(--blue-darker);
-        padding: 0px 15px;
-        border-radius: 5px;
-    }
+    color: var(--blue-accent);
+    margin: 1rem 0px;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  &-body:hover &-header {
+    color: var(--blue-darker);
+  }
+
+  &-tags {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &-tagsName {
+    margin-right: 10px;
+    background: var(--blue-darker);
+    padding: 0px 15px;
+    border-radius: 5px;
+  }
 }
 
-@include medium-screen{
-    .fa-chevron-circle-left{
-        font-size: 3rem;
-    }
+@include medium-screen {
+  .fa-chevron-circle-left {
+    font-size: 3rem;
+  }
 }
 
 
-@include large-screen{
-    .blog{
+@include large-screen {
+  .blog {
 
-        &-body{
-            width: 80%;
-        }
+    &-body {
+      width: 80%;
     }
+  }
 }
