@@ -36,3 +36,8 @@ ADD OVERLAY in MENUS when preloader is visible
 onclick menus trigger preloader
 
 forms spree  EMAIL
+
+## DEPLOYMENT
+
+ng build --prod --base-href "https://davecar21.github.io"
+npx angular-cli-ghpages --dir=dist/davecar-profile --branch master
